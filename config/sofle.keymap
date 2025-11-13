@@ -48,7 +48,9 @@
                    &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         mac {
@@ -59,6 +61,10 @@
 &trans  &trans  &trans  &trans        &trans        &trans  &trans    &tog 0  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         lower_layer {

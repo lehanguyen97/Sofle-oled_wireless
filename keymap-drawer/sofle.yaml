@@ -123,7 +123,7 @@ layers:
   - '='
   - RGUI
   lower:
-  - '`'
+  - ESCAPE
   - F1
   - F2
   - F3
@@ -135,7 +135,7 @@ layers:
   - F9
   - F10
   - F11
-  - {t: ▽, type: trans}
+  - '`'
   - '1'
   - '2'
   - '3'
@@ -147,7 +147,7 @@ layers:
   - '9'
   - '0'
   - F12
-  - {t: ▽, type: trans}
+  - '~'
   - '!'
   - '@'
   - '#'
@@ -155,7 +155,7 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
   - '|'
@@ -203,10 +203,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG UP
-  - {t: ▽, type: trans}
+  - HOME
   - UP
+  - END
   - {t: ▽, type: trans}
-  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LALT
@@ -218,8 +218,8 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
-  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - UNDO
   - CUT
@@ -229,8 +229,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

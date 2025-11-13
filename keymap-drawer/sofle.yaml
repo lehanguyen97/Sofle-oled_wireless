@@ -59,7 +59,7 @@ layers:
   - raise
   - ENTER
   - '-'
-  - +
+  - '='
   - RGUI
   mac:
   - {t: ESC, s: '`'}
@@ -120,7 +120,7 @@ layers:
   - raise
   - ENTER
   - '-'
-  - +
+  - '='
   - RGUI
   lower:
   - '`'

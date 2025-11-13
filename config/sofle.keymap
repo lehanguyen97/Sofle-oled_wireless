@@ -22,7 +22,7 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <2 3>;
+            if-layers = <3 3>;
             then-layer = <4>;
         };
     };
@@ -30,8 +30,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        win {
-            label = "default";
+        win_layer {
+            label = "win";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -41,30 +41,31 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T                            &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A   &kp S             &kp D     &kp F     &kp G                            &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B      &kp C_MUTE    &tog 1  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp RCTRL  &kp RALT   &kp RGUI
+&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                           &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T                            &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A   &kp S             &kp D     &kp F     &kp G                            &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B      &kp C_MUTE    &tog 1  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
+                   &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        mac {
+        mac_layer {
+            label = "mac";
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans        &trans  &trans    &tog 0  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                           &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W             &kp E     &kp R         &kp T                            &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A   &kp S             &kp D     &kp F         &kp G                            &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V         &kp B      &kp C_MUTE    &tog 0  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
+                   &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         lower_layer {

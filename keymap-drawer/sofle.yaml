@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   win:
-  - ESC
+  - {t: ESC, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -59,10 +59,10 @@ layers:
   - raise
   - ENTER
   - '-'
-  - KP PLUS
+  - +
   - RGUI
   mac:
-  - ESC
+  - {t: ESC, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -116,11 +116,11 @@ layers:
   - LALT
   - LEFT GUI
   - SPACE
-  - lower
+  - {t: lower, h: sticky}
   - raise
   - ENTER
   - '-'
-  - KP PLUS
+  - +
   - RGUI
   lower:
   - '`'
@@ -162,7 +162,7 @@ layers:
   - {t: ▽, type: trans}
   - '='
   - '-'
-  - KP PLUS
+  - +
   - '{'
   - '}'
   - {t: ▽, type: trans}

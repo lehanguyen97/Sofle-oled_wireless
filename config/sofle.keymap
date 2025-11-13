@@ -41,11 +41,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                           &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T                            &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A   &kp S             &kp D     &kp F     &kp G                            &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B      &kp C_MUTE    &tog 1  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
+&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                          &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T                           &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A   &kp S             &kp D     &kp F     &kp G                           &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B      &kp C_MUTE    &to 1  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
+                   &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp SPACE  &mo 2         &mo 3  &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
             >;
 
             sensor-bindings =
@@ -56,11 +56,11 @@
         mac_layer {
             label = "mac";
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                           &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W             &kp E     &kp R         &kp T                            &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A   &kp S             &kp D     &kp F         &kp G                            &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V         &kp B      &kp C_MUTE    &tog 0  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &kp SPACE  &mo 2         &mo 3   &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
+&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                          &kp N6     &kp N7     &kp N8       &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W             &kp E     &kp R         &kp T                           &kp Y      &kp U      &kp I        &kp O     &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A   &kp S             &kp D     &kp F         &kp G                           &kp H      &kp J      &kp K        &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V         &kp B      &kp C_MUTE    &to 0  &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
+                   &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &kp SPACE  &mo 2         &mo 3  &kp ENTER  &kp MINUS  &kp KP_PLUS  &kp RGUI
             >;
 
             sensor-bindings =

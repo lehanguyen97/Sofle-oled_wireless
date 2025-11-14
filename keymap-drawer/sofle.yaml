@@ -55,12 +55,12 @@ layers:
   - LGUI
   - LALT
   - SPACE
-  - lower
-  - raise
+  - {t: lower, h: sticky}
+  - {t: raise, h: sticky}
   - ENTER
   - '-'
   - '='
-  - RGUI
+  - RCTRL
   mac:
   - {t: ESC, s: '`'}
   - '1'
@@ -117,11 +117,11 @@ layers:
   - LEFT GUI
   - SPACE
   - {t: lower, h: sticky}
-  - raise
+  - {t: raise, h: sticky}
   - ENTER
   - '-'
   - '='
-  - RGUI
+  - RCTRL
   lower:
   - ESCAPE
   - F1
@@ -202,10 +202,10 @@ layers:
   - CMENU
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PG UP
-  - HOME
-  - UP
-  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -214,10 +214,10 @@ layers:
   - LSHFT
   - {t: ▽, type: trans}
   - CLCK
-  - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
+  - PAGE UP
+  - HOME
+  - UP
+  - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -228,10 +228,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - DEL
-  - BACKSPACE
-  - {t: ▽, type: trans}
+  - PAGE DOWN
+  - LEFT ARROW
+  - DOWN
+  - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

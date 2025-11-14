@@ -51,9 +51,9 @@ layers:
   - .
   - /
   - RSHFT
-  - LEFT CONTROL
   - LGUI
   - LALT
+  - LCTRL
   - SPACE
   - {t: lower, h: sticky}
   - {t: raise, h: sticky}
@@ -195,7 +195,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - {t: ▽, type: trans}
   - INS
   - PSCRN

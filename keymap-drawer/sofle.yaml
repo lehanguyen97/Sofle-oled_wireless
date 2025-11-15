@@ -135,7 +135,7 @@ layers:
   - F9
   - F10
   - F11
-  - '`'
+  - {t: '~', h: '`'}
   - '1'
   - '2'
   - '3'
@@ -184,7 +184,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
-  - BT CLR
+  - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -196,28 +196,28 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
-  - {t: ▽, type: trans}
+  - '`'
   - INS
   - PSCRN
   - CMENU
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BT CLR
   - END
   - {t: ▽, type: trans}
+  - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '~'
   - LALT
   - LCTRL
   - LSHFT
   - {t: ▽, type: trans}
   - CLCK
   - PAGE UP
-  - BACKSPACE
-  - UP
-  - DELETE
+  - LEFT
+  - DOWN
+  - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -229,9 +229,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PAGE DOWN
-  - LEFT ARROW
-  - DOWN
-  - RIGHT
+  - BSPC
+  - {t: ▽, type: trans}
+  - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

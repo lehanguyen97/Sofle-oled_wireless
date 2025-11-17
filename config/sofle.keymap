@@ -99,7 +99,7 @@
             bindings = <
 &kp ESCAPE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &kp HOME       &trans         &trans    &trans     &trans  &kp DEL
 &kp GRAVE   &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &bt BT_CLR                          &kp END        &kp BACKSPACE  &kp UP    &kp DEL    &trans  &trans
-&kp TILDE   &trans        &trans        &trans        &kp CAPS      &caps_word                          &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans
+&kp TILDE   &trans        &trans        &trans        &caps_word    &kp CAPSLOCK                        &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans
 &trans      &trans        &kp LGUI      &kp LALT      &kp LCTRL     &trans        &trans        &trans  &kp PAGE_DOWN  &kp RCTRL      &kp RALT  &kp RGUI   &trans  &trans
                           &trans        &trans        &trans        &trans        &kp ESCAPE    &trans  &trans         &trans         &trans    &trans
             >;

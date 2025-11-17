@@ -56,7 +56,7 @@ layers:
   - LCTRL
   - SPACE
   - {t: lower, h: sticky}
-  - {t: raise, h: sticky}
+  - raise
   - ENTER
   - RCTRL
   - RALT
@@ -112,12 +112,12 @@ layers:
   - .
   - /
   - RSHFT
-  - LEFT CONTROL
+  - LCTRL
   - LALT
   - LEFT GUI
   - SPACE
   - {t: lower, h: sticky}
-  - {t: raise, h: sticky}
+  - raise
   - ENTER
   - RGUI
   - RALT
@@ -237,8 +237,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - ESCAPE
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

@@ -212,8 +212,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - CAPS
   - '&caps_word'
+  - CAPSLOCK
   - PAGE UP
   - LEFT
   - DOWN

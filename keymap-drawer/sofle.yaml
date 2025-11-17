@@ -58,8 +58,8 @@ layers:
   - {t: lower, h: sticky}
   - {t: raise, h: sticky}
   - ENTER
-  - '-'
-  - '='
+  - RCTRL
+  - RALT
   - RCTRL
   mac:
   - {t: ESC, s: '`'}
@@ -119,8 +119,8 @@ layers:
   - {t: lower, h: sticky}
   - {t: raise, h: sticky}
   - ENTER
-  - '-'
-  - '='
+  - RGUI
+  - RALT
   - RCTRL
   lower:
   - ESCAPE
@@ -160,16 +160,16 @@ layers:
   - )
   - '|'
   - {t: ▽, type: trans}
-  - '='
   - '-'
+  - '='
+  - _
   - +
+  - '['
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ']'
   - '{'
   - '}'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ;
   - ':'
   - \
   - {t: ▽, type: trans}
@@ -184,7 +184,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
-  - {t: ▽, type: trans}
+  - ESCAPE
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -203,17 +203,17 @@ layers:
   - {t: ▽, type: trans}
   - BT CLR
   - END
-  - {t: ▽, type: trans}
+  - BACKSPACE
   - UP
-  - {t: ▽, type: trans}
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '~'
-  - LALT
-  - LCTRL
-  - LSHFT
   - {t: ▽, type: trans}
-  - CLCK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - CAPS
+  - '&caps_word'
   - PAGE UP
   - LEFT
   - DOWN
@@ -221,24 +221,24 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - {t: ▽, type: trans}
+  - LGUI
+  - LALT
+  - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PAGE DOWN
-  - BSPC
-  - {t: ▽, type: trans}
-  - DELETE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RCTRL
+  - RALT
+  - RGUI
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESCAPE
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

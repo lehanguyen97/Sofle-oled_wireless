@@ -18,6 +18,8 @@
     mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 };
 
+&lt { quick-tap-ms = <150>; };
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -26,7 +28,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        win_layer {
+        win {
             label = "win";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -37,11 +39,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&gresc     &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y      &kp U      &kp I      &kp O      &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H      &kp J      &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &to 1  &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &sl 2         &mo 3  &kp ENTER  &kp RCTRL  &kp RALT   &kp RCTRL
+&gresc     &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                            &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y        &kp U      &kp I      &kp O      &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H        &kp J      &kp K      &kp L      &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE    &to 1  &kp N        &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LGUI  &kp LALT  &kp LCTRL  &lt 4 SPACE  &sl 2         &mo 3  &lt 5 ENTER  &kp RCTRL  &kp RALT   &kp RCTRL
             >;
 
             sensor-bindings =
@@ -49,7 +51,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        mac_layer {
+        mac {
             label = "mac";
             bindings = <
 &gresc     &kp N1  &kp N2     &kp N3    &kp N4        &kp N5                          &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp BACKSPACE
@@ -64,7 +66,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        lower_layer {
+        lower {
             label = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -88,7 +90,7 @@
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
+        raise {
             label = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -99,16 +101,40 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESCAPE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp HOME       &trans         &trans    &trans     &trans  &kp DEL
-&kp GRAVE   &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &bt BT_CLR                      &kp END        &kp BACKSPACE  &kp UP    &kp DEL    &trans  &trans
-&kp TILDE   &trans        &trans        &trans        &caps_word    &kp CAPSLOCK                    &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans
-&trans      &trans        &kp LGUI      &kp LALT      &kp LCTRL     &trans        &trans    &trans  &kp PAGE_DOWN  &kp RCTRL      &kp RALT  &kp RGUI   &trans  &trans
+&kp ESCAPE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp HOME       &trans         &trans    &trans     &trans     &kp DEL
+&kp GRAVE   &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &bt BT_CLR                      &kp END        &kp BACKSPACE  &kp UP    &kp DEL    &trans     &trans
+&kp TILDE   &trans        &trans        &trans        &caps_word    &kp CAPSLOCK                    &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &trans     &trans
+&trans      &kp LSHFT     &kp LGUI      &kp LALT      &kp LCTRL     &trans        &trans    &trans  &kp PAGE_DOWN  &kp RCTRL      &kp RALT  &kp RGUI   &kp RSHFT  &trans
                           &trans        &trans        &trans        &kp ESCAPE    &trans    &trans  &trans         &trans         &trans    &trans
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_UP PG_DN>;
+        };
+
+        left_mod {
+            bindings = <
+&trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "left_mod";
+        };
+
+        right_mod {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp RCTRL  &kp RALT  &kp RGUI  &kp RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans    &trans    &trans     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans    &trans
+            >;
+
+            label = "right_mod";
         };
     };
 };

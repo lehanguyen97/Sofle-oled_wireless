@@ -18,7 +18,10 @@
     mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 };
 
-&lt { quick-tap-ms = <150>; };
+&lt {
+    quick-tap-ms = <200>;
+    flavor = "balanced";
+};
 
 / {
     // Activate ADJUST layer by pressing raise and lower

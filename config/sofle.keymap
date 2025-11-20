@@ -23,6 +23,8 @@
     flavor = "balanced";
 };
 
+&mt { flavor = "balanced"; };
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 

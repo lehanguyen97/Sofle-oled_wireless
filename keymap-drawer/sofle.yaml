@@ -36,7 +36,7 @@ layers:
   - K
   - L
   - ;
-  - ''''
+  - {t: '''', h: RCTRL}
   - LSHFT
   - Z
   - X
@@ -53,14 +53,14 @@ layers:
   - RSHFT
   - LGUI
   - LALT
-  - LCTRL
+  - SPACE
   - {t: SPACE, h: left_mod}
   - {t: lower, h: sticky}
-  - raise
+  - '&nav_layer_td'
   - {t: ENTER, h: right_mod}
-  - RCTRL
+  - SPACE
   - RALT
-  - RCTRL
+  - RGUI
   mac:
   - {t: ESC, s: '`'}
   - '1'
@@ -97,7 +97,7 @@ layers:
   - K
   - L
   - ;
-  - ''''
+  - {t: '''', h: RCTRL}
   - LSHFT
   - Z
   - X
@@ -112,16 +112,16 @@ layers:
   - .
   - /
   - RSHFT
-  - LCTRL
   - LALT
-  - LEFT GUI
+  - LGUI
+  - SPACE
   - {t: SPACE, h: left_mod}
   - {t: lower, h: sticky}
-  - raise
+  - '&nav_layer_td'
   - {t: ENTER, h: right_mod}
+  - SPACE
   - RGUI
   - RALT
-  - RCTRL
   lower:
   - ESCAPE
   - F1
@@ -183,7 +183,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  raise:
+  nav:
   - ESCAPE
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -237,9 +237,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESCAPE
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: nav, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,10 +270,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
-  - LGUI
-  - LALT
-  - LCTRL
+  - {t: LSHFT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LCTRL, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -337,10 +337,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RCTRL
-  - RALT
-  - RGUI
-  - RSHFT
+  - {t: RCTRL, h: sticky}
+  - {t: RALT, h: sticky}
+  - {t: RGUI, h: sticky}
+  - {t: RSHFT, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

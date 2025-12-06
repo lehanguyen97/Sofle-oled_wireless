@@ -914,17 +914,23 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">HOME</text>
 </g>
-<g transform="translate(644, 35)" class="key trans keypos-7">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(644, 35)" class="key keypos-7">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<a href="#win">
+<text x="0" y="0" class="key tap layer-activator">win</text>
+</a><text x="0" y="24" class="key hold">toggle</text>
 </g>
-<g transform="translate(700, 28)" class="key trans keypos-8">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(700, 28)" class="key keypos-8">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<a href="#mac">
+<text x="0" y="0" class="key tap layer-activator">mac</text>
+</a><text x="0" y="24" class="key hold">toggle</text>
 </g>
-<g transform="translate(756, 35)" class="key trans keypos-9">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(756, 35)" class="key keypos-9">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
+</text>
 </g>
 <g transform="translate(812, 63)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -954,11 +960,9 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(308, 98)" class="key keypos-17">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
-</text>
+<g transform="translate(308, 98)" class="key trans keypos-17">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(588, 98)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1108,9 +1112,11 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(378, 291) rotate(30.0)" class="key trans keypos-54">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(378, 291) rotate(30.0)" class="key keypos-54">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
+<a href="#nav">
+<text x="0" y="0" class="key tap layer-activator">nav</text>
+</a><text x="0" y="38" class="key hold">toggle</text>
 </g>
 <g transform="translate(518, 291) rotate(-30.0)" class="key keypos-55">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>

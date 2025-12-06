@@ -191,9 +191,9 @@ layers:
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - HOME
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: win, h: toggle}
+  - {t: mac, h: toggle}
+  - BT CLR
   - {t: ▽, type: trans}
   - DEL
   - '`'
@@ -201,7 +201,7 @@ layers:
   - PSCRN
   - CMENU
   - {t: ▽, type: trans}
-  - BT CLR
+  - {t: ▽, type: trans}
   - END
   - BACKSPACE
   - UP
@@ -238,7 +238,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: nav, h: toggle}
   - {t: nav, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

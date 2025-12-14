@@ -56,7 +56,7 @@ layers:
   - SPACE
   - {t: SPACE, h: left_mod}
   - {t: lower, h: sticky}
-  - '&nav_layer_td'
+  - nav
   - {t: ENTER, h: right_mod}
   - SPACE
   - RALT
@@ -117,7 +117,7 @@ layers:
   - SPACE
   - {t: SPACE, h: left_mod}
   - {t: lower, h: sticky}
-  - '&nav_layer_td'
+  - nav
   - {t: ENTER, h: right_mod}
   - SPACE
   - RGUI
@@ -221,25 +221,25 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
-  - LGUI
-  - LALT
-  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: nav, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PAGE DOWN
-  - RCTRL
-  - RALT
-  - RGUI
-  - RSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: nav, h: toggle}
-  - {t: nav, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

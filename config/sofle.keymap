@@ -18,128 +18,127 @@
     mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 };
 
-&lt {
-    quick-tap-ms = <200>;
-    flavor = "balanced";
+&lt { quick-tap-ms = <200>; };
+
 };
 
-&mt { flavor = "balanced"; };
-
 / {
-    // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+// Activate ADJUST layer by pressing raise and lower
 
-    keymap {
-        compatible = "zmk,keymap";
+conditional_layers { compatible = "zmk,conditional-layers"; };
 
-        win {
-            label = "win";
+keymap {
+    compatible = "zmk,keymap";
 
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+    win {
+        label = "win";
 
-            bindings = <
+        // ------------------------------------------------------------------------------------------------------------
+        // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+        // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+        // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+        // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+        //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+
+        bindings = <
 &gresc     &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                            &kp N6       &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y        &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H        &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
 &kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE    &to 1  &kp N        &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                    &kp LGUI  &kp LALT  &kp SPACE  &lt 4 SPACE  &sl 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RALT   &kp RGUI
-            >;
+        >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-        };
+        sensor-bindings =
+            <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+            <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+    };
 
-        mac {
-            label = "mac";
-            bindings = <
+    mac {
+        label = "mac";
+        bindings = <
 &gresc     &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                            &kp N6       &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y        &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H        &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
 &kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE    &to 0  &kp N        &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                    &kp LALT  &kp LGUI  &kp SPACE  &lt 4 SPACE  &sl 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RGUI   &kp RALT
-            >;
+        >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-        };
+        sensor-bindings =
+            <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+            <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+    };
 
-        lower {
-            label = "lower";
+    lower {
+        label = "lower";
 
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
+        // TODO: Some binds are waiting for shifted keycode support.
+        // ------------------------------------------------------------------------------------------------------------
+        // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
+        // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
+        // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
+        // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
+        //               |     |      |      |      |        |  |       |      |       |       |      |
 
-            bindings = <
+        bindings = <
 &kp ESCAPE  &kp F1     &kp F2     &kp F3          &kp F4    &kp F5                              &kp F6             &kp F7          &kp F8           &kp F9     &kp F10   &kp F11
 &kp GRAVE   &kp N1     &kp N2     &kp N3          &kp N4    &kp N5                              &kp N6             &kp N7          &kp N8           &kp N9     &kp N0    &kp F12
 &kp TILDE   &kp EXCL   &kp AT     &kp HASH        &kp DLLR  &kp PRCNT                           &kp CARET          &kp AMPS        &kp ASTERISK     &kp LPAR   &kp RPAR  &kp PIPE
 &trans      &kp MINUS  &kp EQUAL  &kp UNDERSCORE  &kp PLUS  &kp LEFT_BRACKET  &trans    &trans  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON  &kp BSLH  &trans
                        &trans     &trans          &trans    &trans            &trans    &trans  &trans             &trans          &trans           &trans
-            >;
+        >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
-        };
+        sensor-bindings =
+            <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+            <&inc_dec_kp PG_UP PG_DN>;
+    };
 
-        nav {
-            label = "nav";
+    nav {
+        label = "nav";
 
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |       |      |
+        // ------------------------------------------------------------------------------------------------------------
+        // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
+        // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
+        // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+        // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+        //                |      |       |       |      |      |  |      |      |      |       |      |
 
-            bindings = <
+        bindings = <
 &kp ESCAPE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp HOME       &to 0          &to 1     &bt BT_CLR  &trans  &kp DEL
 &kp GRAVE   &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp END        &kp BACKSPACE  &kp UP    &kp DEL     &trans  &trans
 &kp TILDE   &trans        &trans        &trans        &caps_word    &kp CAPSLOCK                    &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT   &trans  &trans
 &trans      &trans        &trans        &trans        &tog 3        &trans        &trans    &trans  &kp PAGE_DOWN  &to 3          &trans    &trans      &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans         &trans         &trans    &trans
-            >;
+        >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
-        };
+        sensor-bindings =
+            <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+            <&inc_dec_kp PG_UP PG_DN>;
+    };
 
-        left_mod {
-            bindings = <
+    left_mod {
+        bindings = <
 &trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &sk LSHFT  &sk LGUI  &sk LALT  &sk LCTRL  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &kp ESC    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                    &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
+        >;
 
-            label = "left_mod";
-        };
+        label = "left_mod";
+    };
 
-        right_mod {
-            bindings = <
+    right_mod {
+        bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans      &trans    &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans      &trans    &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &sk RCTRL   &sk RALT  &sk RGUI  &sk RSHFT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp ESCAPE  &trans    &trans    &trans     &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans    &trans
-            >;
+        >;
 
-            label = "right_mod";
-        };
+        label = "right_mod";
     };
+};
+
 };

@@ -45,7 +45,7 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y        &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H        &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
 &kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE    &to 1  &kp N        &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LGUI  &kp LALT  &kp SPACE  &lt 4 SPACE  &sl 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RALT   &kp RGUI
+                   &kp LGUI  &kp LALT  &kp SPACE  &lt 4 SPACE  &mo 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings =
@@ -60,7 +60,7 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y        &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H        &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
 &kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B        &kp C_MUTE    &to 0  &kp N        &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LALT  &kp LGUI  &kp SPACE  &lt 4 SPACE  &sl 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RGUI   &kp RALT
+                   &kp LALT  &kp LGUI  &kp SPACE  &lt 4 SPACE  &mo 2         &mo 3  &lt 5 ENTER  &kp SPACE  &kp RGUI   &kp RALT
             >;
 
             sensor-bindings =

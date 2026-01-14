@@ -55,7 +55,7 @@ layers:
   - LALT
   - SPACE
   - {t: SPACE, h: left_mod}
-  - {t: lower, h: sticky}
+  - lower
   - nav
   - {t: ENTER, h: right_mod}
   - SPACE
@@ -116,7 +116,7 @@ layers:
   - LGUI
   - SPACE
   - {t: SPACE, h: left_mod}
-  - {t: lower, h: sticky}
+  - lower
   - nav
   - {t: ENTER, h: right_mod}
   - SPACE

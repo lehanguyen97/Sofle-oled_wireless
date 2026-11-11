@@ -16,7 +16,6 @@
 #include <zephyr/settings/settings.h>
 #endif
 #include <zmk/behavior.h>
-#include <zmk/ble.h>
 #include <zmk/endpoints.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
@@ -42,18 +41,9 @@ static struct default_layer_settings_t default_layers = {0};
 static struct k_work_delayable df_layers_save_work;
 #endif
 
-static struct zmk_endpoint_instance get_current_endpoint(void) {
-#if IS_ENABLED(CONFIG_ZMK_BLE)
-    // Key default layer by active BLE profile even when USB is plugged in, so plugging/unplugging
-    // USB for charging or testing does not flip the OS layer.
-    return (struct zmk_endpoint_instance){
-        .transport = ZMK_TRANSPORT_BLE,
-        .ble = {.profile_index = zmk_ble_active_profile_index()},
-    };
-#else
-    return zmk_endpoints_selected();
-#endif
-}
+// Keyed by the selected output endpoint, so USB has its own default layer. A charge-only
+// connection never becomes the selected endpoint, so it keeps the BLE profile's layer.
+static struct zmk_endpoint_instance get_current_endpoint(void) { return zmk_endpoints_selected(); }
 
 static zmk_keymap_layer_index_t zmk_default_layer_get(struct zmk_endpoint_instance endpoint) {
     uint8_t index = zmk_endpoint_instance_to_index(endpoint);

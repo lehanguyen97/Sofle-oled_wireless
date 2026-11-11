@@ -26,11 +26,11 @@ Currently pinned ZMK version: **`v0.3`** (`config/west.yml`).
   ```
 - **How it works**:
   - Stores a `uint8_t endpoint_defaults[ZMK_ENDPOINT_COUNT]` array under Zephyr NVS settings key `"default_layer/settings"`.
-  - `&df DF_SEL WIN` (`0`) and `&df DF_SEL MAC` (`1`) update the default layer for the active BLE profile (`0..4`), activate/deactivate layers in `[MIN_INDEX, MAX_INDEX]`, and save to flash after `100` ms (`DEFAULT_LAYER_SAVE_DELAY_MS`, rather than ZMK's 60-second `CONFIG_ZMK_SETTINGS_SAVE_DEBOUNCE`).
+  - `&df DF_SEL WIN` (`0`) and `&df DF_SEL MAC` (`1`) update the default layer for the selected output endpoint (USB, or BLE profile `0..4`; each has its own slot), activate/deactivate layers in `[MIN_INDEX, MAX_INDEX]`, and save to flash after `100` ms (`DEFAULT_LAYER_SAVE_DELAY_MS`, rather than ZMK's 60-second `CONFIG_ZMK_SETTINGS_SAVE_DEBOUNCE`).
   - Why this is vendored instead of using `cormoran/zmk-feature-default-layer`:
     1. `cormoran/zmk-feature-default-layer@main` targets ZMK `v0.4` APIs (`zmk_endpoint_get_selected()`, 2-arg `zmk_keymap_layer_activate(id, locked)`).
     2. `cormoran/zmk-feature-default-layer@zmk-v0.3.0.0` has a boot/profile-switch bug on ZMK `v0.3`: `SYS_INIT` runs before `main()` calls `settings_load()`, so `ble/active_profile` is not loaded yet at `default_layer_init()` time, and subscribing only to `zmk_ble_active_profile_changed` can read `zmk_endpoints_selected()` before `endpoints.c` updates `current_instance`.
-    3. `cormoran` keys by `zmk_endpoints_selected()` (which switches to `ZMK_TRANSPORT_USB` whenever USB is plugged in) and waits `CONFIG_ZMK_SETTINGS_SAVE_DEBOUNCE` (60s) before writing to flash. Our implementation keys by `zmk_ble_active_profile_index()` (so plugging/unplugging USB does not flip the OS layer) and writes to NVS flash after `100` ms.
+    3. `cormoran` waits `CONFIG_ZMK_SETTINGS_SAVE_DEBOUNCE` (60s) before writing to flash. Our implementation writes to NVS flash after `100` ms. Both key by `zmk_endpoints_selected()`, so wired output (USB HID to a host) has its own default layer, separate from the BLE profiles; a charge-only USB connection does not change the selected endpoint.
 
 ### 2. Best-Effort Central -> Peripheral Sleep Heartbeat (`actping`)
 - **Files**:

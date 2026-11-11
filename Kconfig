@@ -1,0 +1,26 @@
+config ZMK_DEFAULT_LAYER
+    bool "Persistent default layer selection per endpoint"
+
+if ZMK_DEFAULT_LAYER
+
+config ZMK_DEFAULT_LAYER_MIN_INDEX
+    int "Minimum layer index configurable as default layer"
+    default 0
+
+config ZMK_DEFAULT_LAYER_MAX_INDEX
+    int "Maximum layer index configurable as default layer"
+    default 1
+
+endif # ZMK_DEFAULT_LAYER
+
+config ZMK_SPLIT_SLEEP_HEARTBEAT
+    bool "Best-effort central-to-peripheral sleep heartbeat"
+    depends on ZMK_SPLIT
+
+if ZMK_SPLIT_SLEEP_HEARTBEAT
+
+config ZMK_SPLIT_SLEEP_HEARTBEAT_INTERVAL_MS
+    int "Central heartbeat interval in milliseconds"
+    default 10000
+
+endif # ZMK_SPLIT_SLEEP_HEARTBEAT

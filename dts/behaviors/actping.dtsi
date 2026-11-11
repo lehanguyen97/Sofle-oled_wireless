@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2026 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        // Invoked on peripherals over split transport, so node name must be <= 8 chars
+        // and must not use /omit-if-no-ref/.
+        actping: actping {
+            compatible = "zmk,behavior-actping";
+            #binding-cells = <0>;
+            display-name = "Activity Ping";
+        };
+    };
+};

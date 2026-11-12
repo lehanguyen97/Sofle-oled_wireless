@@ -44,7 +44,7 @@ layers:
   - V
   - B
   - MUTE
-  - '&df DF_SEL 1'
+  - PP
   - N
   - M
   - ','
@@ -105,7 +105,7 @@ layers:
   - V
   - B
   - MUTE
-  - '&df DF_SEL 0'
+  - PP
   - N
   - M
   - ','
@@ -164,14 +164,14 @@ layers:
   - '='
   - _
   - +
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '['
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - ']'
   - '{'
   - '}'
-  - ':'
-  - \
+  - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -197,7 +197,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '`'
-  - {t: ▽, type: trans}
+  - ESC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -209,18 +209,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '~'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
   - {t: ▽, type: trans}
   - PAGE UP
   - LEFT
   - DOWN
   - RIGHT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESC
   - '&caps_word'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,10 +270,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: LSHFT, h: sticky}
-  - {t: LGUI, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LCTRL, h: sticky}
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -285,7 +285,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESC
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -337,10 +337,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: RCTRL, h: sticky}
-  - {t: RALT, h: sticky}
-  - {t: RGUI, h: sticky}
-  - {t: RSHFT, h: sticky}
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RGUI
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -351,7 +351,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESCAPE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -403,6 +403,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -415,8 +416,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

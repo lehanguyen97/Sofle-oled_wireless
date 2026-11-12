@@ -26,12 +26,15 @@
 };
 
 &lt {
+    flavor = "balanced";
     quick-tap-ms = <200>;
+    require-prior-idle-ms = <150>;
     retro-tap;
 };
 
 &mt {
     flavor = "balanced";
+    require-prior-idle-ms = <150>;
     retro-tap;
 };
 
@@ -56,14 +59,14 @@
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
             // | CTRL  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |  MAC  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |  PLAY |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               | GUI | ALT  | SPC  | LMOD |  LOWER |  |  NAV  | RMOD | SPACE | ALT   | GUI  |
 
             bindings = <
 &gresc     &kp N1  &kp N2    &kp N3     &kp N4            &kp N5                                     &kp N6             &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB    &kp Q   &kp W     &kp E      &kp R             &kp T                                      &kp Y              &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D      &kp F             &kp G                                      &kp H              &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
-&kp LSHFT  &kp Z   &kp X     &kp C      &kp V             &kp B      &kp C_MUTE    &df DF_SEL MAC    &kp N              &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z   &kp X     &kp C      &kp V             &kp B      &kp C_MUTE    &kp C_PP           &kp N              &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                    &kp LGUI  &kp LALT   &kp SPACE         &lt LEFT_MOD SPACE  &mo LOWER     &mo NAV  &lt RIGHT_MOD ENTER  &kp SPACE  &kp RALT   &kp RGUI
             >;
 
@@ -78,7 +81,7 @@
 &gresc     &kp N1  &kp N2    &kp N3     &kp N4            &kp N5                                     &kp N6             &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB    &kp Q   &kp W     &kp E      &kp R             &kp T                                      &kp Y              &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &kp LCTRL  &kp A   &kp S     &kp D      &kp F             &kp G                                      &kp H              &kp J      &kp K      &kp L     &kp SEMI  &mt RCTRL SQT
-&kp LSHFT  &kp Z   &kp X     &kp C      &kp V             &kp B      &kp C_MUTE    &df DF_SEL WIN    &kp N              &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z   &kp X     &kp C      &kp V             &kp B      &kp C_MUTE    &kp C_PP           &kp N              &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                    &kp LALT  &kp LGUI   &kp SPACE         &lt LEFT_MOD SPACE  &mo LOWER     &mo NAV  &lt RIGHT_MOD ENTER  &kp SPACE  &kp RGUI   &kp RALT
             >;
 
@@ -94,14 +97,14 @@
             // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
             // |   ~   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  -  |  =  |  _   |  +   |  [   |        |  |       |  ]   |  {    |  }    |  :   |   \   |       |
+            // |       |  -  |  =  |  _   |  +   |  "   |        |  |       |  [   |  ]    |  {    |  }   |   '   |       |
             //               |     |      |      | RET  |        |  |       |      |       |       |      |
 
             bindings = <
 &kp ESCAPE  &kp F1     &kp F2     &kp F3          &kp F4    &kp F5                              &kp F6             &kp F7          &kp F8           &kp F9     &kp F10   &kp F11
 &kp GRAVE   &kp N1     &kp N2     &kp N3          &kp N4    &kp N5                              &kp N6             &kp N7          &kp N8           &kp N9     &kp N0    &kp F12
 &kp TILDE   &kp EXCL   &kp AT     &kp HASH        &kp DLLR  &kp PRCNT                           &kp CARET          &kp AMPS        &kp ASTERISK     &kp LPAR   &kp RPAR  &kp PIPE
-&trans      &kp MINUS  &kp EQUAL  &kp UNDERSCORE  &kp PLUS  &kp LEFT_BRACKET  &trans    &trans  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON  &kp BSLH  &trans
+&trans      &kp MINUS  &kp EQUAL  &kp UNDERSCORE  &kp PLUS  &kp DQT           &trans    &trans  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SQT  &trans
                        &trans     &trans          &trans    &kp ENTER         &trans    &trans  &trans             &trans          &trans           &trans
             >;
 
@@ -115,16 +118,16 @@
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |      |      |       |      |      |                | HOME |      |       |      |       |       |
-            // |   `   |      |      |       |      |      |                | END  | BKSP |   ^   | DEL  |       |       |
-            // |   ~   |      |      |       |      |      |                | PGUP |  <-  |   v   |  ->  |       |       |
-            // | CAPWD |      |      |       |      |      |      |  |      | PGDN |      |       |      |       | CAPS  |
+            // |   `   | ESC  |      |       |      |      |                | END  | BKSP |   ^   | DEL  |       |       |
+            // |   ~   | GUI  | ALT  | CTRL  | SHFT |      |                | PGUP |  <-  |   v   |  ->  |  ESC  | CAPWD |
+            // |       |      |      |       |      |      |      |  |      | PGDN |      |       |      |       | CAPS  |
             //                |      |       |      |      |      |  |      | SPC  |      |       |      |
 
             bindings = <
 &kp ESCAPE  &trans  &trans  &trans  &trans  &trans                    &kp HOME       &trans         &trans    &trans     &trans  &trans
-&kp GRAVE   &trans  &trans  &trans  &trans  &trans                    &kp END        &kp BACKSPACE  &kp UP    &kp DEL    &trans  &trans
-&kp TILDE   &trans  &trans  &trans  &trans  &trans                    &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans
-&caps_word  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PAGE_DOWN  &trans         &trans    &trans     &trans  &kp CAPSLOCK
+&kp GRAVE   &kp ESC   &trans    &trans     &trans     &trans                    &kp END        &kp BACKSPACE  &kp UP    &kp DEL    &trans   &trans
+&kp TILDE   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                    &kp PAGE_UP    &kp LEFT       &kp DOWN  &kp RIGHT  &kp ESC  &caps_word
+&trans      &trans    &trans    &trans     &trans     &trans  &trans    &trans  &kp PAGE_DOWN  &trans         &trans    &trans     &trans  &kp CAPSLOCK
                     &trans  &trans  &trans  &trans  &trans    &trans  &kp SPACE      &trans         &trans    &trans
             >;
 
@@ -137,8 +140,8 @@
             bindings = <
 &trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LSHFT  &sk LGUI  &sk LALT  &sk LCTRL  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &kp ESC    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                    &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -149,8 +152,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans      &trans    &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans      &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &sk RCTRL   &sk RALT  &sk RGUI  &sk RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp ESCAPE  &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans    &trans
             >;
 
@@ -164,14 +167,14 @@
             // | OUTTG | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      | WIN  |  MAC  |      |       | BTCLR |
             // |       |      |      |       |      |      |                |      |      |       |      |       |       |
             // |       |      |      |       |      |      |                |      |      |       |      |       |       |
-            // |       |      |      |       |      |      |      |  |      |      |      |       |      |       |       |
+            // | BOOT  |      |      |       |      |      |      |  |      |      |      |       |      |       | BOOT  |
             //                |      |       |      |      |      |  |      |      |      |       |      |
 
             bindings = <
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &df DF_SEL WIN  &df DF_SEL MAC  &trans  &trans  &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans          &trans          &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans          &trans          &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans          &trans          &trans  &trans  &trans
+&bootloader   &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans          &trans          &trans  &trans  &bootloader
                       &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans          &trans          &trans
             >;
 

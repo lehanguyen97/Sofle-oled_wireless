@@ -206,7 +206,7 @@ layers:
   - BACKSPACE
   - UP
   - DEL
-  - {t: ▽, type: trans}
+  - ESC
   - {t: ▽, type: trans}
   - '~'
   - LGUI
@@ -218,7 +218,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - ESC
+  - {t: ▽, type: trans}
   - '&caps_word'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -258,7 +258,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -328,7 +328,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

@@ -375,6 +375,12 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">RGUI</text>
 </g>
+<g class="combo combopos-0">
+<path d="M448,274 l-113,0" class="combo"/>
+<path d="M448,274 l113,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="261" width="28" height="26" class="combo"/>
+<text x="448" y="274" class="combo tap">LSHFT</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 398)" class="layer-mac">
@@ -627,6 +633,12 @@ path.combo {
 <g transform="translate(756, 259)" class="key keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">RALT</text>
+</g>
+<g class="combo combopos-0">
+<path d="M448,274 l-113,0" class="combo"/>
+<path d="M448,274 l113,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="261" width="28" height="26" class="combo"/>
+<text x="448" y="274" class="combo tap">LSHFT</text>
 </g>
 </g>
 </g>

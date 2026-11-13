@@ -427,3 +427,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [53, 56]
+  k: LSHFT
+  l: [win, mac]

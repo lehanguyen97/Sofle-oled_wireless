@@ -38,6 +38,18 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_thumb_shift {
+            timeout-ms = <100>;
+            key-positions = <53 56>;
+            bindings = <&kp LSHFT>;
+            layers = <WIN MAC>;
+            slow-release;
+        };
+    };
+
     // Activate ADJUST layer by pressing LOWER and NAV
     conditional_layers {
         compatible = "zmk,conditional-layers";
